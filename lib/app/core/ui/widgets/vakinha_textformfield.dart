@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:get/utils.dart';
 
 class VakinhaTextformfield extends StatelessWidget {
   final String label;
@@ -8,14 +8,14 @@ class VakinhaTextformfield extends StatelessWidget {
   final FormFieldValidator<String>? validator;
   final ValueChanged<String>? onChange;
 
-  const VakinhaTextformfield({
-    Key? key,
-    required this.label,
-    this.controller,
-    this.validator,
-    this.onChange,
-    this.obscureText = false,
-  }) : super(key: key);
+  const VakinhaTextformfield(
+      {Key? key,
+      required this.label,
+      this.controller,
+      this.validator,
+      this.onChange,
+      this.obscureText = false})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,21 +32,15 @@ class VakinhaTextformfield extends StatelessWidget {
         errorStyle: const TextStyle(color: Colors.redAccent),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(23),
-          borderSide: BorderSide(
-            color: Colors.grey[400]!,
-          ),
+          borderSide: BorderSide(color: Colors.grey[400]!),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(23),
-          borderSide: BorderSide(
-            color: Colors.grey[400]!,
-          ),
+          borderSide: BorderSide(color: Colors.grey[400]!),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(23),
-          borderSide: BorderSide(
-            color: Colors.grey[400]!,
-          ),
+          borderSide: BorderSide(color: Colors.grey[400]!),
         ),
         filled: true,
         fillColor: Colors.white,

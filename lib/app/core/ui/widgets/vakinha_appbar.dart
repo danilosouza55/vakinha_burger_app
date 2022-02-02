@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class VakinhaAppbar extends AppBar {
-  VakinhaAppbar({Key? key, double elevation = 2})
-      : super(
+  VakinhaAppbar({
+    Key? key,
+    double elevation = 2,
+  }) : super(
           key: key,
           backgroundColor: Colors.white,
           elevation: elevation,

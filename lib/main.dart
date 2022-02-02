@@ -20,7 +20,7 @@ class _VakinhaBurgerMainAppState extends State<VakinhaBurgerMainApp> {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Vakinha Burger',
-      theme: VakinhaUi.theme,
+      theme: VakinhaUI.theme,
       getPages: [
         ...SplashRouters.routers,
         ...AuthRouters.routers,
