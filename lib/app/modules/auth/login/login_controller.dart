@@ -9,7 +9,6 @@ import 'package:vakinha_burger_mobile/app/core/mixins/messages_mixin.dart';
 import 'package:vakinha_burger_mobile/app/repositories/auth/auth_repository.dart';
 
 class LoginController extends GetxController with LoaderMixin, MessagesMixin {
-  
   final AuthRepository _authRepository;
 
   final _loading = false.obs;
@@ -27,11 +26,10 @@ class LoginController extends GetxController with LoaderMixin, MessagesMixin {
   }
 
   Future<void> login({required String email, required String password}) async {
-
     try {
       _loading.toggle();
       final userLogged = await _authRepository.login(email, password);
-      
+
       final storage = GetStorage();
       storage.write(Constants.USER_KEY, userLogged.id);
       _loading.toggle();
@@ -39,18 +37,16 @@ class LoginController extends GetxController with LoaderMixin, MessagesMixin {
       _loading.toggle();
       log('Login ou senha inválidos', error: e, stackTrace: s);
       _message(MessageModel(
-        title: 'Erro',
-        message: 'Login ou senha inválidos',
-        type: MessageType.error
-      ));
+          title: 'Erro',
+          message: 'Login ou senha inválidos',
+          type: MessageType.error));
     } catch (e, s) {
       _loading.toggle();
       log('Erro ao realizar login', error: e, stackTrace: s);
       _message(MessageModel(
-        title: 'Erro',
-        message: 'Erro ao realizar login',
-        type: MessageType.error
-      ));
+          title: 'Erro',
+          message: 'Erro ao realizar login',
+          type: MessageType.error));
     }
   }
 }

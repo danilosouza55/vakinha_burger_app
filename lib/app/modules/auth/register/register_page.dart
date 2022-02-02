@@ -21,7 +21,6 @@ class _RegisterPageState
   final _emailEC = TextEditingController();
   final _passwordEC = TextEditingController();
 
-
   @override
   void dispose() {
     _nameEC.dispose();

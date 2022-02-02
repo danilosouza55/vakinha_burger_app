@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:vakinha_burger_mobile/app/core/ui/widgets/vakinha_button.dart';
 
 class SplashPage extends StatelessWidget {
-
   const SplashPage({Key? key}) : super(key: key);
 
   @override

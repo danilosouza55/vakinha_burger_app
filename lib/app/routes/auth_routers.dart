@@ -13,7 +13,7 @@ class AuthRouters {
       binding: LoginBindings(),
       page: () => const LoginPage(),
     ),
-     GetPage(
+    GetPage(
       name: '/auth/register',
       binding: RegisterBindings(),
       page: () => const RegisterPage(),

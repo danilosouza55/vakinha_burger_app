@@ -1,4 +1,3 @@
-
 class Constants {
   Constants._();
 

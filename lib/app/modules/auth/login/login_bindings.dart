@@ -6,7 +6,7 @@ import 'package:vakinha_burger_mobile/app/repositories/auth/auth_repository_impl
 class LoginBindings implements Bindings {
   @override
   void dependencies() {
-      Get.lazyPut<AuthRepository>(
+    Get.lazyPut<AuthRepository>(
       () => AuthRepositoryImpl(
         restClient: Get.find(),
       ),

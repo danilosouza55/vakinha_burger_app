@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 class UserModel {
-  
   final int id;
   final String name;
   final String email;
